@@ -14,12 +14,12 @@ TARGET = bluetoothDiscovery
 
 CONFIG += sailfishapp
 
-SOURCES += src/bluetoothDiscovery.cpp
+SOURCES += src/bluetoothDiscovery.cpp \
+    bthelper.cpp
 
 OTHER_FILES += qml/bluetoothDiscovery.qml \
     qml/cover/CoverPage.qml \
     qml/pages/FirstPage.qml \
-    qml/pages/SecondPage.qml \
     rpm/bluetoothDiscovery.changes.in \
     rpm/bluetoothDiscovery.spec \
     rpm/bluetoothDiscovery.yaml \
@@ -37,4 +37,7 @@ CONFIG += sailfishapp_i18n
 # following TRANSLATIONS line. And also do not forget to
 # modify the localized app name in the the .desktop file.
 TRANSLATIONS += translations/bluetoothDiscovery-de.ts
+
+HEADERS += \
+    bthelper.h
 
