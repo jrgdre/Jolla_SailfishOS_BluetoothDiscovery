@@ -33,10 +33,13 @@
 #endif
 
 #include <sailfishapp.h>
+#include "BluetoothAdapter.h"
 
 
 int main(int argc, char *argv[])
 {
+    qmlRegisterType<BluetoothAdapter>("global.medaso.BluetoothAdapter", 1, 0, "BluetoothAdapter");
+
     // SailfishApp::main() will display "qml/template.qml", if you need more
     // control over initialization, you can use:
     //

@@ -31,6 +31,7 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 
+import global.medaso.BluetoothAdapter 1.0
 
 Page {
     id: page
@@ -41,9 +42,14 @@ Page {
 
         // PullDownMenu and PushUpMenu must be declared in SilicaFlickable, SilicaListView or SilicaGridView
         PullDownMenu {
+
             MenuItem {
                 text: qsTr("Scan for devices")
-                onClicked: pageStack.push(Qt.resolvedUrl("SecondPage.qml"))
+                onClicked:
+                {
+                    console.log("calling bluetoothAdapter.scanForNewDevices()");
+                    bluetoothAdapter.scanForNewDevices();
+                }
             }
         }
 
@@ -68,6 +74,13 @@ Page {
             }
         }
     }
+
+    BluetoothAdapter
+    {
+        id: bluetoothAdapter
+
+        onScanStarted      : console.log("");
+        onNewDeviceDetected: console.log("new device: " + info);
+        onScanFinished     : console.log("");
+    }
 }
-
-

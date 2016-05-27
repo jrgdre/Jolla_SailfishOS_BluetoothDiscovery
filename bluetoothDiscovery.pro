@@ -9,15 +9,17 @@
 #   - icon definition filename in desktop file must be changed
 #   - translation filenames have to be changed
 
+QT += bluetooth
+
 # The name of your application
 TARGET = bluetoothDiscovery
 
 CONFIG += sailfishapp
 
 SOURCES += src/bluetoothDiscovery.cpp \
-    bthelper.cpp
+    src/BluetoothAdapter.cpp
 
-OTHER_FILES += qml/bluetoothDiscovery.qml \
+OTHER_FILES += \
     qml/cover/CoverPage.qml \
     qml/pages/FirstPage.qml \
     rpm/bluetoothDiscovery.changes.in \
@@ -39,5 +41,8 @@ CONFIG += sailfishapp_i18n
 TRANSLATIONS += translations/bluetoothDiscovery-de.ts
 
 HEADERS += \
-    bthelper.h
+    src/BluetoothAdapter.h
+
+DISTFILES += \
+    qml/BluetoothDiscovery.qml
 
