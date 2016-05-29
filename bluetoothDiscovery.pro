@@ -12,21 +12,21 @@
 QT += bluetooth
 
 # The name of your application
-TARGET = bluetoothDiscovery
+TARGET = BluetoothDiscovery
 
 CONFIG += sailfishapp
 
-SOURCES += src/bluetoothDiscovery.cpp \
+SOURCES += src/BluetoothDiscovery.cpp \
     src/BluetoothAdapter.cpp
 
 OTHER_FILES += \
     qml/cover/CoverPage.qml \
     qml/pages/FirstPage.qml \
-    rpm/bluetoothDiscovery.changes.in \
-    rpm/bluetoothDiscovery.spec \
-    rpm/bluetoothDiscovery.yaml \
+    rpm/BluetoothDiscovery.changes.in \
+    rpm/BluetoothDiscovery.spec \
+    rpm/BluetoothDiscovery.yaml \
     translations/*.ts \
-    bluetoothDiscovery.desktop
+    BluetoothDiscovery.desktop
 
 SAILFISHAPP_ICONS = 86x86 108x108 128x128 256x256
 
@@ -38,7 +38,7 @@ CONFIG += sailfishapp_i18n
 # planning to localize your app, remember to comment out the
 # following TRANSLATIONS line. And also do not forget to
 # modify the localized app name in the the .desktop file.
-TRANSLATIONS += translations/bluetoothDiscovery-de.ts
+TRANSLATIONS += translations/BluetoothDiscovery-de.ts
 
 HEADERS += \
     src/BluetoothAdapter.h
