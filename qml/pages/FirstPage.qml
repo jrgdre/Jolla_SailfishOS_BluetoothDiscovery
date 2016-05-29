@@ -31,7 +31,7 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 
-import global.medaso.BluetoothAdapter 1.0
+import de.dit.BluetoothAdapter 1.0
 
 Page {
     id: page
